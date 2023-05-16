@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      database: imageMetaData
+      host: localhost
+      port: 27017
+
+
+server:
+  port: 8080
+
+dataLoad:
+  updateData: true # like create-drop
+  perPagePhotos: 1
+  totalCountPhotos: 3 # per hour there are limitation of  requests that's why put small number
+  unsplashUri: https://api.unsplash.com
+  accessKey: MeGciGaBMDSwhOhVPBjKWoECZlF2LPdJ1UPGdXp1qWU
