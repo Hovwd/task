@@ -11,7 +11,7 @@ server:
 
 dataLoad:
   updateData: true # like create-drop
-  perPagePhotos: 1
-  totalCountPhotos: 3 # per hour there are limitation of  requests that's why put small number
+  perPagePhotos: 10
+  totalCountPhotos: 30 # per hour there are limitation of  requests that's why put small number
   unsplashUri: https://api.unsplash.com
   accessKey: MeGciGaBMDSwhOhVPBjKWoECZlF2LPdJ1UPGdXp1qWU
