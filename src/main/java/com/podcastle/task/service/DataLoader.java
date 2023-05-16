@@ -28,7 +28,7 @@ public class DataLoader implements CommandLineRunner {
     private void fetchAndStorePhotos() {
         if (dataLoadConfiguration.isUpdateData()) {
             log.info("Deleting existing photo metadata.");
-            metaDataRepository.deleteAll();
+            metaDataRepository.deleteAll().block();
             int totalPages = (dataLoadConfiguration.getTotalCountPhotos() / dataLoadConfiguration.getPerPagePhotos()) / Color.values().length;
             log.info("Fetching and storing photos by color.");
             Arrays.stream(Color.values()).forEach(color -> fetchAndSave(color, totalPages, dataLoadConfiguration.getPerPagePhotos()));

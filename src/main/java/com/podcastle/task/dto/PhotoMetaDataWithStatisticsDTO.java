@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class PhotoMetaDataWithStatisticsDTO extends PhotoMetaTataDTO{
-    StatisticDTO statistic;
+    private StatisticDTO statistic;
 }
